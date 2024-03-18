@@ -482,13 +482,13 @@ section#ourservices .modal-dialog.modal-lg.modal-dialog-centered {
 }
 
 .sub-card::before {
-  content: "";
+  /*content: "";
   background-color: #ffc700;
   width: 1px;
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 0;
+  right: 0;*/
 }
 .sub-card-body {
   color: #fff;
