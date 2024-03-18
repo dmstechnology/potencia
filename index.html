@@ -44,13 +44,40 @@
   width: 100%;
   height: 530px;
 }
+
+ .mobile_view_text_title{
+    font-size: 15px;
+  }
+  .mobile_view_values_container{
+    display: none;
+  }
  
+  .web_view_values_container{
+    display: block;
+  }
+  .box_hiding{
+    width: 15px;
+    height: 220px;
+    background-color: black;
+    position: absolute;
+    margin-left: 99%;
+    margin-top: -44%;
+  }
  @media (max-width: 767px) {
 
     .mobile-view-column {
         flex: 0 0 50%;
         max-width: 50%;
     }
+    .mobile_view_values_container{
+    display: block;
+  }
+  .web_view_values_container{
+    display: none;
+  }
+  .box_hiding{
+    display: none;
+  }
 }
 
  </style>
@@ -304,7 +331,7 @@
           </div>
           <!------------------------->
           <!-- 12 card  -->
-          <div class="col-sm-12 col-md-6 col-lg-3 family_entertainment_centers mobile-view-column" data-bs-slide-to="3">
+          <div class="col-sm-12 col-md-6 col-lg-4 family_entertainment_centers mobile-view-column" data-bs-slide-to="3">
               <div class="sub-card wow fadeInUp" data-wow-delay="0.1s">
                 <div class="circle-icon mb-4">
                   <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -328,7 +355,7 @@
           </div>
 
 
-          <div class="col-sm-12 col-md-6 col-lg-3 concept_design_and_rendering mobile-view-column" data-bs-slide-to="4">
+          <div class="col-sm-12 col-md-6 col-lg-4 concept_design_and_rendering mobile-view-column" data-bs-slide-to="4">
             <div class="sub-card wow fadeInUp" data-wow-delay="0.1s">
               <div class="circle-icon mb-4">
                 <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -349,44 +376,16 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-3 themed_artistic_rockwork mobile-view-column" data-bs-slide-to="5">
-            <div class="sub-card wow fadeInUp" data-wow-delay="0.1s">
-              <div class="circle-icon mb-4">
-                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="30" cy="30" r="29.5" stroke="white"/>
-                  <path d="M40.6866 24.3493L37.2085 20.8712C37.1369 20.7989 37.0465 20.7481 36.9475 20.7244C36.8485 20.7007 36.7449 20.7051 36.6483 20.7371C36.5517 20.7691 36.4659 20.8274 36.4007 20.9055C36.3354 20.9836 36.2932 21.0783 36.2788 21.1791C36.2213 21.5812 36.053 21.9594 35.7927 22.2712C35.5323 22.5831 35.1903 22.8163 34.805 22.9447C34.4196 23.0731 34.006 23.0917 33.6107 22.9983C33.2154 22.905 32.8538 22.7034 32.5666 22.4162C32.2793 22.1289 32.0777 21.7674 31.9844 21.372C31.8911 20.9767 31.9096 20.5632 32.0381 20.1778C32.1665 19.7924 32.3997 19.4504 32.7115 19.1901C33.0234 18.9298 33.4016 18.7614 33.8037 18.7039C33.9044 18.6895 33.9992 18.6474 34.0772 18.5821C34.1553 18.5168 34.2136 18.4311 34.2456 18.3344C34.2776 18.2378 34.282 18.1342 34.2583 18.0353C34.2346 17.9363 34.1838 17.8459 34.1116 17.7742L30.6334 14.2961C30.5309 14.1936 30.3918 14.136 30.2468 14.136C30.1018 14.136 29.9627 14.1936 29.8602 14.2961L26.8398 17.3154C26.6911 16.7588 26.3984 16.2511 25.9912 15.8435C25.5841 15.4359 25.0768 15.1426 24.5203 14.9933C23.9639 14.8439 23.3779 14.8437 22.8214 14.9927C22.2648 15.1417 21.7573 15.4345 21.3498 15.8419C20.9424 16.2492 20.6494 16.7566 20.5003 17.3132C20.3512 17.8697 20.3512 18.4556 20.5004 19.0121C20.6496 19.5686 20.9427 20.076 21.3502 20.4833C21.7577 20.8905 22.2653 21.1833 22.8219 21.3322L19.8048 24.3493C19.7022 24.4519 19.6447 24.5909 19.6447 24.7359C19.6447 24.881 19.7022 25.02 19.8048 25.1226L22.823 28.1446C22.1604 28.3226 21.5703 28.7038 21.1356 29.2346C20.701 29.7653 20.4436 30.419 20.3997 31.1036C20.3558 31.7883 20.5277 32.4695 20.891 33.0514C21.2544 33.6333 21.791 34.0867 22.4254 34.3478L21.1484 38.031C20.9788 38.4132 20.8991 38.8292 20.9154 39.247C20.9317 39.6648 21.0436 40.0733 21.2425 40.4411L23.162 44.9802C23.1691 44.9976 23.1774 45.0146 23.1866 45.031C23.3211 45.2774 23.3912 45.5537 23.3906 45.8344V46.3594C23.3906 46.5044 23.4482 46.6435 23.5508 46.7461C23.6534 46.8486 23.7925 46.9063 23.9375 46.9063C24.0825 46.9063 24.2216 46.8486 24.3242 46.7461C24.4268 46.6435 24.4844 46.5044 24.4844 46.3594V45.8344C24.4838 45.3794 24.3711 44.9317 24.1563 44.5306L22.2362 39.9916C22.2286 39.9728 22.2198 39.9546 22.2099 39.9369C22.0846 39.7081 22.0149 39.453 22.0066 39.1923C21.9982 38.9316 22.0514 38.6726 22.1618 38.4363L23.4995 34.5863C23.5569 34.5863 23.6132 34.5945 23.6712 34.5945C24.393 34.5951 25.0947 34.3573 25.6674 33.918C26.2401 33.4787 26.6517 32.8625 26.8381 32.1652L27.7656 33.0889V38.7031C27.7656 38.8482 27.8232 38.9873 27.9258 39.0898C28.0284 39.1924 28.1675 39.25 28.3125 39.25C28.4575 39.25 28.5966 39.1924 28.6992 39.0898C28.8018 38.9873 28.8594 38.8482 28.8594 38.7031V31.0469C28.8594 30.6118 29.0322 30.1945 29.3399 29.8868C29.6476 29.5791 30.0649 29.4063 30.5 29.4063C30.9351 29.4063 31.3524 29.5791 31.6601 29.8868C31.9678 30.1945 32.1406 30.6118 32.1406 31.0469V37.6701C32.1416 38.4341 32.3194 39.1875 32.6602 39.8713L32.8603 40.2727C33.1249 40.8045 33.2627 41.3904 33.2627 41.9844C33.2627 42.5784 33.1249 43.1643 32.8603 43.6961L32.3134 44.7899C32.1999 45.0179 32.1408 45.2691 32.1406 45.5238V46.3594C32.1406 46.5044 32.1982 46.6435 32.3008 46.7461C32.4034 46.8486 32.5425 46.9063 32.6875 46.9063C32.8325 46.9063 32.9716 46.8486 33.0742 46.7461C33.1768 46.6435 33.2344 46.5044 33.2344 46.3594V45.5238C33.2338 45.4392 33.2525 45.3556 33.2891 45.2793L33.8359 44.1856C34.1761 43.5017 34.3531 42.7484 34.3531 41.9847C34.3531 41.2209 34.1761 40.4676 33.8359 39.7838L33.6358 39.3824C33.4397 38.9886 33.3126 38.564 33.2601 38.1273C33.6153 38.4837 34.0374 38.7665 34.5023 38.9591C34.9672 39.1518 35.4655 39.2507 35.9688 39.25C36.4039 39.25 36.8212 39.0772 37.1289 38.7695C37.4365 38.4618 37.6094 38.0445 37.6094 37.6094V34.4922C38.3152 34.3175 38.9429 33.9132 39.3938 33.3427C39.8447 32.7722 40.093 32.0681 40.0999 31.341C40.1067 30.6139 39.8716 29.9052 39.4315 29.3263C38.9914 28.7475 38.3714 28.3314 37.669 28.1435L40.6866 25.1215C40.7888 25.019 40.8462 24.8801 40.8462 24.7354C40.8462 24.5907 40.7888 24.4518 40.6866 24.3493ZM35.9688 38.1563C35.2438 38.1554 34.5488 37.867 34.0362 37.3544C33.5236 36.8418 33.2352 36.1468 33.2344 35.4219V32.5781L33.6522 32.1603C33.8245 32.8079 34.1916 33.387 34.7037 33.8193C35.2158 34.2516 35.8483 34.5163 36.5156 34.5775V37.6094C36.5156 37.7544 36.458 37.8935 36.3555 37.9961C36.2529 38.0986 36.1138 38.1563 35.9688 38.1563ZM36.047 28.2212C35.9649 28.3023 35.9106 28.4073 35.8918 28.5212C35.8731 28.6351 35.8908 28.752 35.9425 28.8551C35.9942 28.9583 36.0772 29.0425 36.1797 29.0956C36.2821 29.1487 36.3988 29.1681 36.5129 29.1509C36.9672 29.0866 37.4303 29.1668 37.8366 29.3801C38.2428 29.5935 38.5717 29.9292 38.7766 30.3398C38.9816 30.7503 39.0522 31.215 38.9786 31.6679C38.9049 32.1208 38.6907 32.5391 38.3662 32.8636C38.0418 33.1881 37.6235 33.4023 37.1705 33.4759C36.7176 33.5496 36.253 33.4789 35.8424 33.274C35.4319 33.069 35.0962 32.7402 34.8828 32.3339C34.6694 31.9277 34.5892 31.4646 34.6535 31.0102C34.6707 30.8961 34.6514 30.7795 34.5982 30.677C34.5451 30.5746 34.461 30.4916 34.3578 30.4399C34.2546 30.3882 34.1377 30.3704 34.0239 30.3892C33.91 30.4079 33.805 30.4622 33.7238 30.5443L33.2344 31.0349C33.2336 30.6758 33.1621 30.3204 33.0239 29.9889C32.8858 29.6575 32.6837 29.3565 32.4292 29.1031C32.1748 28.8498 31.8729 28.649 31.5408 28.5123C31.2088 28.3756 30.8531 28.3057 30.494 28.3065C30.1349 28.3073 29.7795 28.3788 29.448 28.5169C29.1166 28.6551 28.8156 28.8572 28.5623 29.1116C28.0506 29.6256 27.764 30.3217 27.7656 31.0469V31.5424L26.7632 30.5399C26.6821 30.4579 26.5771 30.4036 26.4632 30.3848C26.3493 30.366 26.2324 30.3838 26.1293 30.4355C26.0261 30.4872 25.9419 30.5702 25.8888 30.6727C25.8357 30.7751 25.8163 30.8918 25.8335 31.0059C25.8978 31.4602 25.8176 31.9233 25.6043 32.3295C25.3909 32.7358 25.0552 33.0647 24.6446 33.2696C24.234 33.4746 23.7694 33.5452 23.3165 33.4715C22.8636 33.3979 22.4453 33.1837 22.1208 32.8592C21.7963 32.5347 21.5821 32.1164 21.5085 31.6635C21.4348 31.2106 21.5055 30.746 21.7104 30.3354C21.9154 29.9248 22.2442 29.5891 22.6505 29.3758C23.0567 29.1624 23.5198 29.0822 23.9741 29.1465C24.0883 29.1638 24.205 29.1446 24.3076 29.0915C24.4101 29.0385 24.4933 28.9543 24.5451 28.8511C24.5968 28.7479 24.6146 28.6309 24.5959 28.517C24.5771 28.403 24.5228 28.298 24.4406 28.2168L20.9641 24.7359L24.4445 21.2578C24.5265 21.1767 24.5808 21.0717 24.5996 20.9578C24.6183 20.8439 24.6006 20.7271 24.5489 20.6239C24.4972 20.5207 24.4142 20.4365 24.3117 20.3834C24.2093 20.3303 24.0926 20.3109 23.9785 20.3281C23.5248 20.3916 23.0626 20.3109 22.6571 20.0975C22.2517 19.8842 21.9234 19.5489 21.7187 19.139C21.514 18.7292 21.4432 18.2653 21.5162 17.813C21.5892 17.3607 21.8024 16.9428 22.1257 16.6181C22.5426 16.2209 23.0964 15.9994 23.6723 15.9994C24.2481 15.9994 24.8019 16.2209 25.2188 16.6181C25.4582 16.8581 25.6384 17.1503 25.7455 17.4719C25.8525 17.7934 25.8834 18.1354 25.8357 18.4709C25.8185 18.5851 25.8379 18.7017 25.891 18.8041C25.9441 18.9066 26.0283 18.9896 26.1315 19.0413C26.2346 19.093 26.3515 19.1108 26.4654 19.092C26.5792 19.0733 26.6843 19.019 26.7654 18.9369L30.2484 15.4577L32.699 17.9088C32.2253 18.135 31.8128 18.4716 31.4961 18.8902C31.1795 19.3089 30.9679 19.7974 30.8791 20.3148C30.7903 20.8322 30.827 21.3633 30.986 21.8636C31.145 22.3638 31.4217 22.8187 31.7929 23.1899C32.1641 23.561 32.6189 23.8378 33.1192 23.9968C33.6195 24.1558 34.1506 24.1924 34.668 24.1037C35.1853 24.0149 35.6739 23.8033 36.0925 23.4866C36.5112 23.1699 36.8478 22.7574 37.074 22.2838L39.5251 24.7343L36.047 28.2212Z" fill="white"/>
-                  <path d="M46.3594 25.5781H43.0781C42.9331 25.5781 42.794 25.5205 42.6914 25.4179C42.5889 25.3154 42.5312 25.1763 42.5312 25.0312C42.5312 24.8862 42.5889 24.7471 42.6914 24.6446C42.794 24.542 42.9331 24.4844 43.0781 24.4844H46.3594C46.5044 24.4844 46.6435 24.542 46.7461 24.6446C46.8486 24.7471 46.9062 24.8862 46.9062 25.0312C46.9062 25.1763 46.8486 25.3154 46.7461 25.4179C46.6435 25.5205 46.5044 25.5781 46.3594 25.5781Z" fill="white"/>
-                  <path d="M42.487 19.2891C42.3666 19.2891 42.2496 19.2493 42.1541 19.1761C42.0586 19.1028 41.9899 19 41.9588 18.8837C41.9276 18.7675 41.9357 18.6442 41.9817 18.5329C42.0278 18.4217 42.1093 18.3288 42.2135 18.2686L45.0573 16.628C45.1828 16.5566 45.3315 16.5378 45.4709 16.5756C45.6102 16.6135 45.729 16.7049 45.8012 16.83C45.8734 16.955 45.8932 17.1036 45.8563 17.2432C45.8194 17.3828 45.7287 17.5021 45.6042 17.5752L42.7604 19.2158C42.6774 19.264 42.583 19.2893 42.487 19.2891Z" fill="white"/>
-                  <path d="M45.328 33.5078C45.2319 33.508 45.1376 33.4827 45.0545 33.4345L42.2108 31.7939C42.1481 31.7582 42.0931 31.7105 42.0489 31.6535C42.0047 31.5965 41.9722 31.5314 41.9533 31.4618C41.9344 31.3922 41.9295 31.3195 41.9388 31.248C41.9481 31.1765 41.9714 31.1075 42.0075 31.045C42.0435 30.9826 42.0916 30.9279 42.1489 30.8841C42.2062 30.8403 42.2716 30.8082 42.3413 30.7898C42.411 30.7713 42.4837 30.7669 42.5552 30.7766C42.6266 30.7864 42.6954 30.8102 42.7577 30.8467L45.6014 32.4873C45.7057 32.5475 45.7871 32.6404 45.8332 32.7517C45.8793 32.8629 45.8873 32.9862 45.8562 33.1025C45.825 33.2187 45.7564 33.3215 45.6609 33.3948C45.5654 33.4681 45.4484 33.5078 45.328 33.5078Z" fill="white"/>
-                  <path d="M17.9219 25.5781H14.6406C14.4956 25.5781 14.3565 25.5205 14.2539 25.4179C14.1514 25.3154 14.0938 25.1763 14.0938 25.0312C14.0938 24.8862 14.1514 24.7471 14.2539 24.6446C14.3565 24.542 14.4956 24.4844 14.6406 24.4844H17.9219C18.0669 24.4844 18.206 24.542 18.3086 24.6446C18.4111 24.7471 18.4688 24.8862 18.4688 25.0312C18.4688 25.1763 18.4111 25.3154 18.3086 25.4179C18.206 25.5205 18.0669 25.5781 17.9219 25.5781Z" fill="white"/>
-                  <path d="M18.513 19.2891C18.417 19.2893 18.3227 19.264 18.2396 19.2158L15.3958 17.5752C15.2713 17.5021 15.1806 17.3828 15.1437 17.2432C15.1068 17.1036 15.1266 16.955 15.1988 16.83C15.271 16.7049 15.3898 16.6135 15.5291 16.5756C15.6685 16.5378 15.8172 16.5566 15.9427 16.628L18.7865 18.2686C18.8907 18.3288 18.9722 18.4217 19.0183 18.5329C19.0643 18.6442 19.0724 18.7675 19.0413 18.8837C19.0101 19 18.9414 19.1028 18.8459 19.1761C18.7504 19.2493 18.6334 19.2891 18.513 19.2891Z" fill="white"/>
-                  <path d="M15.672 33.5078C15.5517 33.5078 15.4346 33.4681 15.3391 33.3948C15.2436 33.3215 15.175 33.2187 15.1438 33.1025C15.1127 32.9862 15.1207 32.8629 15.1668 32.7517C15.2129 32.6404 15.2943 32.5475 15.3986 32.4873L18.2423 30.8467C18.3046 30.8102 18.3734 30.7864 18.4448 30.7766C18.5163 30.7669 18.589 30.7713 18.6587 30.7898C18.7284 30.8082 18.7938 30.8403 18.8511 30.8841C18.9084 30.9279 18.9565 30.9826 18.9925 31.045C19.0286 31.1075 19.0519 31.1765 19.0612 31.248C19.0705 31.3195 19.0656 31.3922 19.0467 31.4618C19.0278 31.5314 18.9953 31.5965 18.9511 31.6535C18.9069 31.7105 18.8519 31.7582 18.7892 31.7939L15.9455 33.4345C15.8624 33.4827 15.7681 33.508 15.672 33.5078Z" fill="white"/>
-                  </svg>
-              </div>
-              <div class="sub-card-body">
-                <h5 class="sub-card-title mb-4">Themed Artistic Rockwork</h5>
-                <a class="themed_artistic_rockwork" data-bs-slide-to="5" href="javascript:void(0)">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-3 themed_art_worked mobile-view-column" data-bs-slide-to="6">
-            <div class="sub-card wow fadeInUp" data-wow-delay="0.1s">
-              <div class="circle-icon mb-4">
-                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="30" cy="30" r="29.5" stroke="white"/>
-                  <path d="M43.124 24.1527C42.8488 23.9827 42.5055 23.9672 42.2159 24.1118L31.0159 29.7118C30.6997 29.87 30.5 30.1932 30.5 30.5467V43.6134C30.5 43.9368 30.6675 44.2373 30.9426 44.4074C31.0926 44.5 31.2627 44.5467 31.4333 44.5467C31.576 44.5467 31.7189 44.514 31.8508 44.4481L43.0508 38.8481C43.3669 38.69 43.5667 38.3669 43.5667 38.0134V24.9467C43.5667 24.6232 43.3991 24.3228 43.124 24.1527ZM41.7 37.4366L32.3667 42.1032V31.1236L41.7 26.4569V37.4366Z" fill="white"/>
-                  <path d="M42.6327 22.1154C42.6206 21.7482 42.3938 21.4223 42.0537 21.2828L30.4337 16.5228C30.199 16.4268 29.9352 16.4302 29.7029 16.5328L18.9229 21.2928C18.5956 21.4373 18.3797 21.7563 18.3671 22.1139C18.3545 22.4714 18.5476 22.8048 18.864 22.9718L29.644 28.6652C29.7803 28.737 29.93 28.7732 30.0799 28.7732C30.2203 28.7732 30.3609 28.7416 30.4905 28.678L42.1105 22.9847C42.4407 22.8231 42.6451 22.4828 42.6327 22.1154ZM30.0959 26.7928L21.4407 22.2217L30.0938 18.4008L39.4236 22.2227L30.0959 26.7928Z" fill="white"/>
-                  <path d="M29.0803 29.7271L18.8136 24.1271C18.5245 23.9696 18.1738 23.9759 17.8902 24.144C17.6069 24.3121 17.4333 24.6172 17.4333 24.9466V38.0132C17.4333 38.3548 17.6199 38.669 17.9197 38.8326L28.1864 44.4326C28.3258 44.5085 28.4797 44.5466 28.6333 44.5466C28.7983 44.5466 28.963 44.5028 29.1098 44.4158C29.3931 44.2477 29.5667 43.9426 29.5667 43.6132V30.5466C29.5667 30.205 29.3801 29.8908 29.0803 29.7271ZM20.1087 37.9003L27.7 32.3794V34.9078L22.0953 38.9839L20.1087 37.9003ZM19.3 33.6522L24.9048 29.5759L26.8913 30.6595L19.3 36.1804V33.6522ZM23.0913 28.5868L19.3 31.3441V26.5188L23.0913 28.5868ZM23.9088 39.973L27.7 37.2158V42.041L23.9088 39.973Z" fill="white"/>
-                  </svg>
-              </div>
-              <div class="sub-card-body">
-                <h5 class="sub-card-title mb-4">Themed art worked</h5>
-                <a class="themed_art_worked" data-bs-slide-to="6" href="javascript:void(0);">Read More</a>
-              </div>
-            </div>
-          </div>
+         
+
+
+
+
+
+
+      
           <!-- ---- -->
-          <div class="col-sm-12 col-md-6 col-lg-3 turnkey_fit_out mobile-view-column" data-bs-slide-to="7">
+          <div class="col-sm-12 col-md-6 col-lg-4 turnkey_fit_out mobile-view-column" data-bs-slide-to="7">
             <div class="sub-card wow fadeInUp" data-wow-delay="0.1s">
               <div class="circle-icon mb-4">
                 <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -406,9 +405,10 @@
                 <h5 class="sub-card-title mb-4">Turnkey Fit-Out</h5>
                 <a class="turnkey_fit_out" data-bs-slide-to="7" href="javascript:void(0)">Read More</a>
               </div>
+              <div class="box_hiding"></div>
             </div>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-3 themed_retail_concept_stores mobile-view-column" data-bs-slide-to="8">
+        <div class="col-sm-12 col-md-6 col-lg-4 themed_retail_concept_stores mobile-view-column" data-bs-slide-to="8">
           <div class="sub-card wow fadeInUp" data-wow-delay="0.1s">
             <div class="circle-icon mb-4">
               <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -429,7 +429,7 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-3 villa_construction mobile-view-column" data-bs-slide-to="9">
+        <div class="col-sm-12 col-md-6 col-lg-4 villa_construction mobile-view-column" data-bs-slide-to="9">
           <div class="sub-card wow fadeInUp" data-wow-delay="0.1s">
             <div class="circle-icon mb-4">
               <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -449,7 +449,7 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-3 metal_structure_and_metal_props mobile-view-column" data-bs-slide-to="10">
+        <div class="col-sm-12 col-md-6 col-lg-4 metal_structure_and_metal_props mobile-view-column" data-bs-slide-to="10">
           <div class="sub-card wow fadeInUp" data-wow-delay="0.1s">
             <div class="circle-icon mb-4">
               <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -463,6 +463,7 @@
               <h5 class="sub-card-title mb-4"> <strong>Metal Structure and Metal Props </strong></h5>
               <a class="metal_structure_and_metal_props"  data-bs-slide-to="10" href="javascript:void(0)">Read More</a>
             </div>
+            <div class="box_hiding"></div>
           </div>
         </div>
         <!----------------------->
@@ -638,13 +639,19 @@
     <!--== Our Services Section End ==-->
 
     <!--== Our Value Section ==-->
-    <section id="ourvalue" class="value-sec section-padding bg-color">
+
+
+
+    <section id="ourvalue" class="value-sec section-padding bg-color web_view_values_container">
       <div class="container">
         <div class="row">
           <div class="sec-title wow fadeInUp" data-wow-delay="0.1s">
             <h2 style="color: #000;">Our Values</h2>
           </div>
         </div>
+
+
+
         <div class="row wow fadeInUp" data-wow-delay="0.1s">
           <div class="col-md-4 card-div card-div-dark card1">
             <div class="card-content">
@@ -658,11 +665,12 @@
                   <h2>INTEGRITY</h2>
                 </div>
               <div class="card-content-description">
-                 <h4>"We would rather be honest, 
-than being impressive. It also 
-means doing the 
-right thing, even when no one 
-is watching."</h4>	
+                  <h4>"We would rather be honest, 
+                  than being impressive. It also 
+                  means doing the 
+                  right thing, even when no one 
+                  is watching."
+                  </h4>	
               </div>
             </div>
   
@@ -681,10 +689,10 @@ is watching."</h4>
               </div>
               <div class="card-content-description">
                  <h4>"We build projects 
-considering it to be our own. 
-We never cut corners in 
-delivering unparalleled 
-quality."</h4>	
+                  considering it to be our own. 
+                  We never cut corners in 
+                  delivering unparalleled 
+                  quality."</h4>	
               </div>
             </div>
           </div>
@@ -702,13 +710,13 @@ quality."</h4>
               </div>
               <div class="card-content-description">
                  <h4>"We give emphasis on 
-relationships rather than 
-transactions that can 
-establish support for 
-continuous improvement and 
-long-term relationships 
-which extends to future 
-projects."</h4>	
+                    relationships rather than 
+                    transactions that can 
+                    establish support for 
+                    continuous improvement and 
+                    long-term relationships 
+                    which extends to future 
+                    projects."</h4>	
               </div>
             </div>
           </div>
@@ -726,12 +734,12 @@ projects."</h4>
               </div>
               <div class="card-content-description">
                  <h4>"We believe in creating 
-relationships with our client 
-and show them how 
-we do it. We know loyal 
-customers flock to businesses 
-that are honest and 
-trustworthy."</h4>	
+                  relationships with our client 
+                  and show them how 
+                  we do it. We know loyal 
+                  customers flock to businesses 
+                  that are honest and 
+                  trustworthy."</h4>	
               </div>
             </div>
           </div>
@@ -749,12 +757,12 @@ trustworthy."</h4>
               </div>
               <div class="card-content-description">
                  <h4>"Ownership 
-cannot be delegated or 
-assigned; it is something that 
-is cultivated. We have 
-the courage to admit when we 
-are wrong and do our best to 
-make it right."</h4>	
+                  cannot be delegated or 
+                  assigned; it is something that 
+                  is cultivated. We have 
+                  the courage to admit when we 
+                  are wrong and do our best to 
+                  make it right."</h4>	
               </div>
             </div>
           </div>
@@ -772,18 +780,213 @@ make it right."</h4>
               </div>
               <div class="card-content-description">
                  <h4>"We are well aware that there 
-is always room to make small 
-improvements, challenge 
-the status quo, and tune 
-processes and practice on an 
-everyday basis."</h4>	
+                  is always room to make small 
+                  improvements, challenge 
+                  the status quo, and tune 
+                  processes and practice on an 
+                  everyday basis."</h4>	
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+
+
+
+
+
+    <section id="ourvalue" class="value-sec section-padding bg-color mobile_view_values_container">
+      <div class="container">
+        <div class="row">
+          <div class="sec-title wow fadeInUp" data-wow-delay="0.1s">
+            <h2 style="color: #000;">Our Values</h2>
+          </div>
+        </div>
+
+
+        
+        <div class="row wow fadeInUp" data-wow-delay="0.1s">
+          <div class="col-md-4 card-div card-div-dark card1 mobile-view-column">
+            <div class="card-content">
+              <center>
+                <div class="card-content-icon">                 
+                  <img class="main-image" src="./images/values-icons/1.png" alt="Main Image">
+                  <img class="hover-image" src="./images/values-icons/2.png" alt="Hover Image">
+                </div>
+                 </center>    
+                <div class="card-content-title">
+                  <h2 style="font-size: 15px;" class="mobile_view_text_title">INTEGRITY</h2>
+                </div>
+              <div class="card-content-description">
+                  <h4 style="font-size:12px;">"We would rather be honest, 
+                  than being impressive. It also 
+                  means doing the 
+                  right thing, even when no one 
+                  is watching."
+                  </h4> 
+              </div>
+            </div>
+  
+  
+          </div>
+          <div class="col-md-4 card-div card-div-light card2 mobile-view-column">
+            <div class="card-content">
+              <center>
+                <div class="card-content-icon">                 
+                  <img class="main-image" src="./images/values-icons/3.png" alt="Main Image">
+                  <img class="hover-image" src="./images/values-icons/4.png" alt="Hover Image">
+                </div>
+                 </center>        
+              <div class="card-content-title">
+                <h2 style="font-size: 15px;" class="mobile_view_text_title">QUALITY</h2>
+              </div>
+              <div class="card-content-description">
+                 <h4 style="font-size:12px;">"We build projects 
+                  considering it to be our own. 
+                  We never cut corners in 
+                  delivering unparalleled 
+                  quality."</h4>  
+              </div>
+            </div>
+          </div>
+
+
+
+            <div class="col-md-4 card-div card-div-light card2 mobile-view-column">
+            <div class="card-content">
+              <center>
+                <div class="card-content-icon">                 
+                  <img class="main-image" src="./images/values-icons/5.png" alt="Main Image">
+                      <img class="hover-image" src="./images/values-icons/5.png" alt="Hover Image">
+                </div>
+                 </center>        
+              <div class="card-content-title">
+                <h2 style="font-size: 15px;" class="mobile_view_text_title">COLLABORATION</h2>
+              </div>
+              <div class="card-content-description">
+                 <h4 style="font-size:12px;">"We give emphasis on 
+                    relationships rather than 
+                    transactions that can 
+                    establish support for 
+                    continuous improvement and 
+                    long-term relationships 
+                    which extends to future 
+                    projects."</h4>  
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="col-md-4 card-div card-div-dark card4 mobile-view-column">
+            <div class="card-content">
+              <center>
+                <div class="card-content-icon">                 
+                  <img class="main-image" src="./images/values-icons/8.png" alt="Main Image">
+                      <img class="hover-image" src="./images/values-icons/8.png" alt="Hover Image">
+                   </div>
+                 </center>        
+  
+              <div class="card-content-title">
+                <h2 style="font-size: 15px;color: white;" class="mobile_view_text_title">TRUSTWORTHINESS</h2>
+              </div>
+              <div class="card-content-description">
+                 <h4 style="font-size:12px;">"We believe in creating 
+                  relationships with our client 
+                  and show them how 
+                  we do it. We know loyal 
+                  customers flock to businesses 
+                  that are honest and 
+                  trustworthy."</h4>  
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 card-div card-div-dark card5 mobile-view-column">
+            <div class="card-content">
+              <center>
+                <div class="card-content-icon">                 
+                  <img class="main-image" src="./images/values-icons/10.png" alt="Main Image">
+                      <img class="hover-image" src="./images/values-icons/10.png" alt="Hover Image">
+                   </div>
+                 </center>        
+  
+              <div class="card-content-title">
+                <h2 style="font-size: 15px;" class="mobile_view_text_title">OWNERSHIP</h2>
+              </div>
+              <div class="card-content-description">
+                 <h4 style="font-size:12px;">"Ownership 
+                  cannot be delegated or 
+                  assigned; it is something that 
+                  is cultivated. We have 
+                  the courage to admit when we 
+                  are wrong and do our best to 
+                  make it right."</h4>  
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 card-div card-div-light card6 mobile-view-column">
+            <div class="card-content">
+              <center>
+                <div class="card-content-icon">                 
+                  <img class="main-image" src="./images/values-icons/12.png" alt="Main Image">
+                      <img class="hover-image" src="./images/values-icons/12.png" alt="Hover Image">
+                   </div>
+                 </center>        
+  
+              <div class="card-content-title">
+                <h2  style="font-size: 15px;" class="mobile_view_text_title">CONSTANT IMPROVEMENT</h2>
+              </div>
+              <div class="card-content-description">
+                 <h4 style="font-size:12px;">"We are well aware that there 
+                  is always room to make small 
+                  improvements, challenge 
+                  the status quo, and tune 
+                  processes and practice on an 
+                  everyday basis."</h4> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
     <!--== Our Value Section End ==-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!--== Our Projects ==-->
       <section style="background: black!important;margin-top: 60px;" id="ourprojects" class="projects-sec section-padding bg-white bg-dark text-dark">
@@ -1143,7 +1346,7 @@ everyday basis."</h4>
           <div class="col-lg-6">
               <p span class="upper-heading me-2 wow fadeInUp" data-wow-delay="0.1s">Under Construction Projects</p>
               <h2 class="lower-heading mb-0 wow fadeInUp" data-wow-delay="0.1s">
-                Upcomming Projects
+                Upcoming Projects
               </h2>
           </div>
           <div class="col-lg-6 text-lg-end">
@@ -1160,7 +1363,7 @@ everyday basis."</h4>
                 <div class="project-card-body">
                   <h5 class="project-card-title">FEC</h5>
                   <p class="project-card-text">SUPERPARK DUBAI</p>
-                  <p class="date">June 15, 2023</p>
+                  <!-- <p class="date">June 15, 2023</p> -->
                 </div>
               </div>
             </div><!-- End testimonial item -->
@@ -1171,7 +1374,7 @@ everyday basis."</h4>
                 <div class="project-card-body">
                   <h5 class="project-card-title">CONSTRUCTION</h5>
                   <p class="project-card-text">PRIVATE VILLA</p>
-                  <p class="date">June 15, 2023</p>
+                  <!-- <p class="date">June 15, 2023</p> -->
                 </div>
               </div>
             </div><!-- End testimonial item -->
@@ -1182,7 +1385,7 @@ everyday basis."</h4>
                 <div class="project-card-body">
                   <h5 class="project-card-title">FEC</h5>
                   <p class="project-card-text">IMMERCITY</p>
-                  <p class="date">June 15, 2023</p>
+                  <!-- <p class="date">June 15, 2023</p> -->
                 </div>
               </div>
             </div><!-- End testimonial item -->
@@ -1193,7 +1396,7 @@ everyday basis."</h4>
                 <div class="project-card-body">
                   <h5 class="project-card-title">FEC</h5>
                   <p class="project-card-text">WUNDER</p>
-                  <p class="date">June 15, 2023</p>
+                  <!-- <p class="date">June 15, 2023</p> -->
                 </div>
               </div>
             </div><!-- End testimonial item -->
@@ -1204,7 +1407,7 @@ everyday basis."</h4>
                 <div class="project-card-body">
                   <h5 class="project-card-title">FEC</h5>
                   <p class="project-card-text">MAD CAP</p>
-                  <p class="date">June 15, 2023</p>
+                  <!-- <p class="date">June 15, 2023</p> -->
                 </div>
               </div>
             </div><!-- End testimonial item --> 
@@ -1216,7 +1419,7 @@ everyday basis."</h4>
                 <div class="project-card-body">
                   <h5 class="project-card-title">FEC</h5>
                   <p class="project-card-text">DEFCON-1 ABU DHABI</p>
-                  <p class="date">June 15, 2023</p>
+                  <!-- <p class="date">June 15, 2023</p> -->
                 </div>
               </div>
             </div><!-- End testimonial item --> 
@@ -1228,7 +1431,7 @@ everyday basis."</h4>
                 <div class="project-card-body">
                   <h5 class="project-card-title">FEC</h5>
                   <p class="project-card-text">DEFCON-1 DUBAI</p>
-                  <p class="date">June 15, 2023</p>
+                  <!-- <p class="date">June 15, 2023</p> -->
                 </div>
               </div>
             </div><!-- End testimonial item --> 
@@ -1239,7 +1442,7 @@ everyday basis."</h4>
                 <div class="project-card-body">
                   <h5 class="project-card-title">FEC</h5>
                   <p class="project-card-text">MIND HYPE</p>
-                  <p class="date">June 15, 2023</p>
+                  <!-- <p class="date">June 15, 2023</p> -->
                 </div>
               </div>
             </div><!-- End testimonial item --> 
@@ -1250,7 +1453,7 @@ everyday basis."</h4>
                 <div class="project-card-body">
                   <h5 class="project-card-title">F & B</h5>
                   <p class="project-card-text">CITY CHALLENGE</p>
-                  <p class="date">June 15, 2023</p>
+                  <!-- <p class="date">June 15, 2023</p> -->
                 </div>
               </div>
             </div><!-- End testimonial item -->
@@ -1261,7 +1464,7 @@ everyday basis."</h4>
                 <div class="project-card-body">
                   <h5 class="project-card-title">FEC ENHANCEMENT</h5>
                   <p class="project-card-text">CITY CHALLENGE</p>
-                  <p class="date">June 15, 2023</p>
+                  <!-- <p class="date">June 15, 2023</p> -->
                 </div>
               </div>
             </div><!-- End testimonial item -->
@@ -1564,9 +1767,9 @@ everyday basis."</h4>
                 <h3><img src="./images/Potencia-Logo.png" alt=""></h3>
               
               <div class="d-flex pt-2 mt-4">
-                <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href=""><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href="https://www.facebook.com/Potencia.ae" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href="https://www.linkedin.com/company/potencia-building-contracting-llc/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href="https://www.instagram.com/potencia_uae?igsh=MWY4d240YWU3ZXUyeA==" target="_blank"><i class="fab fa-instagram"></i></a>
               </div>
               </div>
             </div>
@@ -1622,63 +1825,7 @@ everyday basis."</h4>
     <script src="vendor/swiper/swiper-bundle.min.js"></script>
     <script src="./js/wow.min.js"></script>
     <script src="./js/custom.js"></script>
+    <script src="./js/menu.js"></script>
 
-
-
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        var currentYear = new Date().getFullYear();
-        var copyrightElement = document.getElementById('copyright');
-        copyrightElement.innerHTML = '&copy; ' + currentYear + ' Potencia  All Rights Reserved.';
-      });
-
-      $('.design_and_building').click(function(){
-         location.href="design-and-build.html";
-      })
-
-      $('.construction').click(function(){
-         location.href="construction.html";
-      })
-
-      $('.m_e_p').click(function(){
-         location.href="m-e-p.html";
-      })
-
-      $('.family_entertainment_centers').click(function(){
-         location.href="family-entertainment-centers.html";
-      })
-
-       $('.concept_design_and_rendering').click(function(){
-
-         location.href="concept-design-and-3d-rendering.html";
-      })
-
-       $('.themed_artistic_rockwork').click(function(){
-         location.href="themed-artistic-rockwork.html";
-      })
-
-       $('.themed_art_worked').click(function(){
-         location.href="themed-art-worked.html";
-      })
-
-      $('.turnkey_fit_out').click(function(){
-         location.href="turnkey-fit-out.html";
-      })
-
-       $('.themed_retail_concept_stores').click(function(){
-         location.href="themed-retail-concept-stores.html";
-      })
-
-        $('.villa_construction').click(function(){
-         location.href="villa-construction.html";
-      })
-
-      $('.metal_structure_and_metal_props').click(function(){
-         location.href="metal-structure-and-metal-props.html";
-      })     
-      
-
-    </script>
   </body>
 </html>
