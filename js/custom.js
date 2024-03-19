@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }, step);
   }
   counter("count1", 0, 100, 3000);
-  counter("count2", 100, 2012, 3500);
+  counter("count2", 1800, 2012, 3500);
   counter("count3", 0, 100, 3000);
 });
 
